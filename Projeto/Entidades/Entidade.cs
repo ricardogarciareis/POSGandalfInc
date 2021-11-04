@@ -1,19 +1,25 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Projeto.Lib.Entidades
 {
-    public class Cliente : Entidade
+    public abstract class Entidade
     {
-        public string NIF { get; set; }
+        public Guid Identificador { get; set; }
+        public string Nome { get; set; }
 
-        public Cliente()
+        public Entidade()
         {
-
+            Identificador = Guid.NewGuid();
         }
 
-        public bool NIFValido()
+        public Entidade(string nome)
         {
-            return false;
+            Nome = nome;
+            Identificador = Guid.NewGuid();
         }
 
         public override string ToString()
@@ -21,11 +27,8 @@ namespace Projeto.Lib.Entidades
             var sb = new StringBuilder();
             sb.AppendLine("|   ID: " + Identificador);
             sb.AppendLine("| Nome: " + Nome);
-            sb.AppendLine("|  NIF: " + NIF);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();
         }
-
-
     }
 }
