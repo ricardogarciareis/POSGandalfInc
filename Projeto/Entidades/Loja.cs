@@ -1,21 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Projeto.Lib.Entidades
 {
-    public class Cliente : Pessoa
+    public class Loja : Pessoa
     {
-        public DateTime DataNascimento { get; set; }
 
-        public Cliente()
-        {
-
-        }
-
-        public static bool NIFValido()
-        {
-            return false;
-        }
+        public string Local { get; set; }
 
         public override string ToString()
         {
@@ -24,7 +18,7 @@ namespace Projeto.Lib.Entidades
             sb.AppendLine("|            Ativo: " + Ativo);
             sb.AppendLine("|       Designação: " + Nome);
             sb.AppendLine("|              NIF: " + NIF);
-            sb.AppendLine("|  Data Nascimento: " + DataNascimento);
+            sb.AppendLine("|      Localização: " + Local);
             sb.AppendLine("|         Endereço: " + Morada.Endereco);
             sb.AppendLine("|    Código Postal: " + Morada.CodigoPostal);
             sb.AppendLine("|       Localidade: " + Morada.Localidade);

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace Projeto.Lib.Entidades
 {
-    public class Cliente : Pessoa
+    public class Fornecedor : Pessoa
     {
-        public DateTime DataNascimento { get; set; }
-
-        public Cliente()
-        {
-
-        }
+        public int Pontuacao { get; set; }  //Classificação do Fornecedor
 
         public static bool NIFValido()
         {
@@ -24,7 +18,6 @@ namespace Projeto.Lib.Entidades
             sb.AppendLine("|            Ativo: " + Ativo);
             sb.AppendLine("|       Designação: " + Nome);
             sb.AppendLine("|              NIF: " + NIF);
-            sb.AppendLine("|  Data Nascimento: " + DataNascimento);
             sb.AppendLine("|         Endereço: " + Morada.Endereco);
             sb.AppendLine("|    Código Postal: " + Morada.CodigoPostal);
             sb.AppendLine("|       Localidade: " + Morada.Localidade);
@@ -33,6 +26,7 @@ namespace Projeto.Lib.Entidades
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();
         }
+
 
 
     }

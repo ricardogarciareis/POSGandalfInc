@@ -11,6 +11,21 @@ namespace Projeto.Lib.Entidades
         public Guid Identificador { get; set; }
         public string Nome { get; set; }
 
+        public bool Ativo { get; set; }
+
+        private DateTime dataAlteracao;
+        public DateTime DataAlteracao
+        {
+            get { return dataAlteracao; }
+            set { 
+                if(dataAlteracao == new DateTime())
+                {
+                    dataAlteracao = DateTime.Now;
+                }
+                dataAlteracao = value;
+            }
+        }
+
         public Entidade()
         {
             Identificador = Guid.NewGuid();
@@ -25,8 +40,10 @@ namespace Projeto.Lib.Entidades
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine("|   ID: " + Identificador);
-            sb.AppendLine("| Nome: " + Nome);
+            sb.AppendLine("|               ID: " + Identificador);
+            sb.AppendLine("|             Nome: " + Nome);
+            sb.AppendLine("|            Ativo: " + Ativo);
+            sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();
         }

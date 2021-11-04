@@ -8,8 +8,6 @@ namespace Projeto.ConsoleApp
         {
             var ecra = new Saidas();
             ecra.ApresentarMenu();
-            //ecra.ListarClientes();
-            //ecra.ListarUtilizadores();
 
 
         }

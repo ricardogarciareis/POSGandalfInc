@@ -1,16 +1,14 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Projeto.Lib.Entidades
 {
-    public class Utilizador : Entidade
+    public class CategoriaArtigo : Entidade
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
 
-        public Utilizador()
-        {
-
-        }
 
         public override string ToString()
         {
@@ -18,8 +16,6 @@ namespace Projeto.Lib.Entidades
             sb.AppendLine("|               ID: " + Identificador);
             sb.AppendLine("|            Ativo: " + Ativo);
             sb.AppendLine("|             Nome: " + Nome);
-            sb.AppendLine("|         UserName: " + Email);
-            sb.AppendLine("|         Password: " + Password);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();
