@@ -37,15 +37,5 @@ namespace Projeto.Lib.Entidades
             Identificador = Guid.NewGuid();
         }
 
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.AppendLine("|               ID: " + Identificador);
-            sb.AppendLine("|             Nome: " + Nome);
-            sb.AppendLine("|            Ativo: " + Ativo);
-            sb.AppendLine("| Última Alteração: " + DataAlteracao);
-            sb.Append("+-----------------------------------------------------------------+");
-            return sb.ToString();
-        }
     }
 }

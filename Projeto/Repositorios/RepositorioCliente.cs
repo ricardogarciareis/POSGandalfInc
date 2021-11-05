@@ -1,6 +1,7 @@
 ﻿using Projeto.Lib.Entidades;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Projeto.Lib.Repositorios
 {
@@ -13,21 +14,24 @@ namespace Projeto.Lib.Repositorios
             var cliente0 = new Cliente
             {
                 Nome = "Nome do Cliente 0",
-                NIF = "123456780"
+                NIF = "123456780",
+                DataNascimento = DateTime.Parse("10/10/2000")
             };
             ListaClientes.Add(cliente0);
 
             var cliente1 = new Cliente
             {
                 Nome = "Nome do Cliente 1",
-                NIF = "123456781"
+                NIF = "123456781",
+                DataNascimento = DateTime.Parse("11/11/2001"),
             };
             ListaClientes.Add(cliente1);
 
             var cliente2 = new Cliente
             {
                 Nome = "Nome do Cliente 2",
-                NIF = "123456782"
+                NIF = "123456782",
+                DataNascimento = DateTime.Parse("12/12/2002")
             };
             ListaClientes.Add(cliente2);
         }

@@ -23,14 +23,22 @@ namespace Projeto.ConsoleApp
                     case "2A":
                         ListarClientes();
                         break;
+                    case "3A":
+                        ListarArtigos();
+                        break;
                     case "5A":
                         ListarLojas();
+                        break;
+                    case "6A":
+                        ListarFornecedores();
+                        break;
+                    case "7A":
+                        ListarCategoriasArtigos();
                         break;
                     default:
                         break;
                 }
             }
-            
         }
 
         public void Menu()
@@ -138,8 +146,45 @@ namespace Projeto.ConsoleApp
             }
         }
 
+        public void ListarFornecedores()
+        {
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            Console.WriteLine("|               CONSULTA DE TODOS OS FORNECEDORES                 |");
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            var repo = new RepositorioFornecedor();
+            var listaFornecedores = repo.ObterTodos();
+            foreach (var item in listaFornecedores)
+            {
+                Console.WriteLine(item);
+            }
+        }
 
+        public void ListarArtigos()
+        {
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            Console.WriteLine("|                  CONSULTA DE TODOS OS ARTIGOS                   |");
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            var repo = new RepositorioArtigo();
+            var listaArtigos = repo.ObterTodos();
+            foreach (var item in listaArtigos)
+            {
+                Console.OutputEncoding = Encoding.UTF8;  //Utilizado para reconhecer o símbolo €
+                Console.WriteLine(item);
+            }
+        }
 
+        public void ListarCategoriasArtigos()
+        {
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            Console.WriteLine("|           CONSULTA DE TODAS AS CATEGORIAS DE ARTIGOS            |");
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            var repo = new RepositorioCategoriaArtigo();
+            var listaCategoriasArtigos = repo.ObterTodos();
+            foreach (var item in listaCategoriasArtigos)
+            {
+                Console.WriteLine(item);
+            }
+        }
 
     }
 }

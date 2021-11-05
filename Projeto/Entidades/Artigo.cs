@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace Projeto.Lib.Entidades
 {
@@ -11,18 +12,26 @@ namespace Projeto.Lib.Entidades
         public Fornecedor Fornecedor { get; set; }
         public decimal PrecoUnitario { get; set; }
 
+
+        public Artigo()
+        {
+            Ativo = true;
+            DataAlteracao = DateTime.Now;
+        }
+
+
         public override string ToString()
         {
             var sb = new StringBuilder();
             sb.AppendLine("|               ID: " + Identificador);
             sb.AppendLine("|            Ativo: " + Ativo);
             sb.AppendLine("|             Nome: " + Nome);
-            sb.AppendLine("|        Categoria: " + CategoriaArtigo.Nome);
+            //sb.AppendLine("|        Categoria: " + CategoriaArtigo.Nome);
             sb.AppendLine("|       Referência: " + ReferenciaEAN);
             sb.AppendLine("|       Fabricante: " + Fabricante);
             sb.AppendLine("|  Número de Série: " + NumeroSerie);
-            sb.AppendLine("|       Fornecedor: " + Fornecedor.Nome);
-            sb.AppendLine("|   Preço Unitário: " + PrecoUnitario);
+            //sb.AppendLine("|       Fornecedor: " + Fornecedor.Nome);
+            sb.AppendLine("|   Preço Unitário: " + "€ " + PrecoUnitario);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();

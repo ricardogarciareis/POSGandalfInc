@@ -13,8 +13,7 @@ namespace Projeto.Lib.Repositorios
             var utilizador0 = new Utilizador
             {
                 Nome = "Nome do Utilizador 0",
-                NIF = "223456780",
-                UserName = "User0",
+                Email = "User0",
                 Password = "passuser0"
             };
             ListaUtilizadores.Add(utilizador0);
@@ -22,8 +21,7 @@ namespace Projeto.Lib.Repositorios
             var utilizador1 = new Utilizador
             {
                 Nome = "Nome do Utilizador 1",
-                NIF = "223456781",
-                UserName = "User1",
+                Email = "User1",
                 Password = "passuser1"
             };
             ListaUtilizadores.Add(utilizador1);
@@ -31,8 +29,7 @@ namespace Projeto.Lib.Repositorios
             var utilizador2 = new Utilizador
             {
                 Nome = "Nome do Utilizador 2",
-                NIF = "223456782",
-                UserName = "User2",
+                Email = "User2",
                 Password = "passuser2"
             };
             ListaUtilizadores.Add(utilizador2);
@@ -60,7 +57,7 @@ namespace Projeto.Lib.Repositorios
         {
             var dadosUtilizador = ListaUtilizadores
                                 .Where(x => x.Nome == Nome)
-                                .OrderByDescending(x => x.NIF)
+                                .OrderByDescending(x => x.Nome)
                                 .FirstOrDefault();
             return dadosUtilizador;
         }

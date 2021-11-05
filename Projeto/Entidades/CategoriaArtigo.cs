@@ -8,7 +8,11 @@ namespace Projeto.Lib.Entidades
 {
     public class CategoriaArtigo : Entidade
     {
-
+        public CategoriaArtigo()
+        {
+            Ativo = true;
+            DataAlteracao = DateTime.Now;
+        }
 
         public override string ToString()
         {
