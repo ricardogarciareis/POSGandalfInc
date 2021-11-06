@@ -5,7 +5,7 @@ using System;
 
 namespace Projeto.Lib.Repositorios
 {
-    public class RepositorioCategoriaArtigo : IRepositorio<CategoriaArtigo>
+    public class RepositorioCategoriaArtigo
     {
         private List<CategoriaArtigo> ListaCategoriasArtigos;
         public RepositorioCategoriaArtigo()
@@ -30,7 +30,7 @@ namespace Projeto.Lib.Repositorios
             ListaCategoriasArtigos.Add(categoriaArtigo2);
         }
 
-
+        /*
         public void Apagar(CategoriaArtigo obj)
         {
             ListaCategoriasArtigos.Remove(obj);
@@ -43,23 +43,32 @@ namespace Projeto.Lib.Repositorios
             return temp;
         }
 
+        public CategoriaArtigo Atualizar(CategoriaArtigo t, CategoriaArtigo novosDados)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Criar(CategoriaArtigo obj)
         {
             ListaCategoriasArtigos.Add(obj);
         }
-
-        public CategoriaArtigo ObterPorNome(string Nome)
+        */
+        #region Read
+        public CategoriaArtigo ObterPorIdentificador(Guid guid)
         {
-            var dadosCategoriasArtigo = ListaCategoriasArtigos
-                                .Where(x => x.Nome == Nome)
-                                .OrderByDescending(x => x.Nome)
-                                .FirstOrDefault();
-            return dadosCategoriasArtigo;
+            return ListaCategoriasArtigos.FirstOrDefault(x => x.Identificador == guid);
+        }
+
+        public CategoriaArtigo ObterPorNome(string nome)
+        {
+            return ListaCategoriasArtigos.FirstOrDefault(x => x.Nome == nome);
         }
 
         public List<CategoriaArtigo> ObterTodos()
         {
             return ListaCategoriasArtigos;
         }
+        #endregion
+
     }
 }

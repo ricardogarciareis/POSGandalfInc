@@ -43,6 +43,9 @@ namespace Projeto.ConsoleApp
                                 case "2A":
                                     ListarArtigos();
                                     break;
+                                case "2B":
+                                    ApresentarArtigoProcuraNome();
+                                    break;
                                 default:
                                     Console.WriteLine("| Escolha uma opção válida                                        |");
                                     SubMenu2();
@@ -393,7 +396,7 @@ namespace Projeto.ConsoleApp
             Console.WriteLine("+-----------------------------------------------------------------+");
             var repo = new RepositorioCliente();
             var listaClientes = repo.ObterTodos();
-            foreach(var item in listaClientes)
+            foreach (var item in listaClientes)
             {
                 Console.WriteLine(item);
             }
@@ -470,9 +473,58 @@ namespace Projeto.ConsoleApp
             opcao = Console.ReadLine().ToUpper();
         }
 
-        
 
-        
+        public void ApresentarVendaProcuraNome()
+        {
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            Console.WriteLine("|                       CONSULTA DA VENDA                         |");
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            //string nome = Console.ReadLine();
+            //var repo = new RepositorioVenda();
+            //var vendaObtida = repo.;
+            //foreach (var item in listaVendas)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Console.WriteLine("| S - SAIR                                                        |");
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            Console.Write("| ESCOLHA UMA OPÇÃO: ");
+            opcao = Console.ReadLine().ToUpper();
+        }
+
+        public void ApresentarArtigoProcuraNome()
+        {
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            Console.WriteLine("|                      CONSULTA DO ARTIGO                         |");
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            Console.Write("| DIGITE O NOME DO ARTIGO OU RETORNE (R): ");
+            string nome = Console.ReadLine();
+            Console.WriteLine("+-----------------------------------------------------------------+");
+            if(nome.ToUpper() == "R") { SubMenu2(); }
+            var repo = new RepositorioArtigo();
+            var vendaObtida = repo.ObterPorNome(nome);
+            if(vendaObtida == null) {
+                Console.WriteLine("Nome de artigo inexistente.");
+            }
+            else
+            {
+                Console.WriteLine("|               ID: " + vendaObtida.Identificador);
+                Console.WriteLine("|            Ativo: " + vendaObtida.Ativo);
+                Console.WriteLine("|             Nome: " + vendaObtida.Nome);
+                Console.WriteLine("|        Categoria: " + vendaObtida.CategoriaArtigo);
+                Console.WriteLine("|       Referência: " + vendaObtida.ReferenciaEAN);
+                Console.WriteLine("|       Fabricante: " + vendaObtida.Fabricante);
+                Console.WriteLine("|  Número de Série: " + vendaObtida.NumeroSerie);
+                Console.WriteLine("|       Fornecedor: " + vendaObtida.Fornecedor);
+                Console.WriteLine("|   Preço Unitário: € " + vendaObtida.PrecoUnitario);
+                Console.WriteLine("|          Criação: " + vendaObtida.DataCriacao);
+                Console.WriteLine("| Última Alteração: " + vendaObtida.DataAlteracao);
+                Console.WriteLine("+-----------------------------------------------------------------+");
+                Console.Write("| SAIR (S): ");
+                opcao = Console.ReadLine().ToUpper();
+            }
+            opcao = "S";
+        }
 
     }
 }

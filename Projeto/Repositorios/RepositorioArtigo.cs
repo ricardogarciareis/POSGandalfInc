@@ -5,9 +5,9 @@ using System;
 
 namespace Projeto.Lib.Repositorios
 {
-    public class RepositorioArtigo : IRepositorio<Artigo>
+    public class RepositorioArtigo
     {
-        private List<Artigo> ListaArtigos;
+        public List<Artigo> ListaArtigos;
         public RepositorioArtigo()
         {
             ListaArtigos = new List<Artigo>();
@@ -42,7 +42,7 @@ namespace Projeto.Lib.Repositorios
             ListaArtigos.Add(artigo2);
         }
 
-
+        /*
         public void Apagar(Artigo obj)
         {
             ListaArtigos.Remove(obj);
@@ -55,23 +55,31 @@ namespace Projeto.Lib.Repositorios
             return temp;
         }
 
+        public Artigo Atualizar(Artigo t, Artigo novosDados)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Criar(Artigo obj)
         {
             ListaArtigos.Add(obj);
         }
-
-        public Artigo ObterPorNome(string Nome)
+        */
+        #region Read
+        public Artigo ObterPorIdentificador(Guid guid)
         {
-            var dadosArtigo = ListaArtigos
-                                .Where(x => x.Nome == Nome)
-                                .OrderByDescending(x => x.Nome)
-                                .FirstOrDefault();
-            return dadosArtigo;
+            return ListaArtigos.FirstOrDefault(x => x.Identificador == guid);
+        }
+
+        public Artigo ObterPorNome(string nome)
+        {
+            return ListaArtigos.FirstOrDefault(x => x.Nome == nome);
         }
 
         public List<Artigo> ObterTodos()
         {
             return ListaArtigos;
         }
+        #endregion
     }
 }

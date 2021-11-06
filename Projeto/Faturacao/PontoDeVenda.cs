@@ -4,30 +4,15 @@ using System.Text;
 
 namespace Projeto.Lib.Faturacao
 {
-    public class PontoDeVenda
+    public class PontoDeVenda : Entidade
     {
-        public Guid Identificador { get; set; }
-        public bool Ativo { get; set; }
         public Loja Loja { get; set; }
 
-        private DateTime dataAlteracao;
-        public DateTime DataAlteracao
-        {
-            get { return dataAlteracao; }
-            set
-            {
-                if (dataAlteracao == new DateTime())
-                {
-                    dataAlteracao = DateTime.Now;
-                }
-                dataAlteracao = value;
-            }
-        }
 
         public PontoDeVenda()
         {
-            Ativo = true;
-            DataAlteracao = DateTime.Now;
+            //Ativo = true;
+            //DataCriacao = DateTime.Now;
         }
 
         public override string ToString()
@@ -37,7 +22,9 @@ namespace Projeto.Lib.Faturacao
             sb.AppendLine("|            Ativo: " + Ativo);
             //sb.AppendLine("|       Designação: " + Loja.Nome);
             //sb.AppendLine("|            Local: " + Loja.Local);
+            sb.AppendLine("|          Criação: " + DataCriacao);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
+
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();
         }

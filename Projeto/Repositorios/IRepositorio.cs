@@ -8,12 +8,13 @@ namespace Projeto.Lib.Repositorios
 {
     public interface IRepositorio<T>
     {
-        //CRUD
-        void Criar(T obj);
+        //CRUD 06/11/2021 16:50 f2
+        void Criar(T t);
+        T ObterPorIdentificador(Guid guid);
         T ObterPorNome(string Nome);
         List<T> ObterTodos();
-        T Atualizar(string nomeAntigo, string nomeNovo);
-        void Apagar(T obj);
+        void Atualizar(T t, T novosDados);
+        void Apagar(T t);
 
     }
 }

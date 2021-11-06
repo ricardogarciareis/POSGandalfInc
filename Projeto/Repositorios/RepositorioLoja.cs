@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto.Lib.Repositorios 
 {
-    public class RepositorioLoja : IRepositorio<Loja>
+    public class RepositorioLoja
     {
         private List<Loja> ListaLojas;
         public RepositorioLoja()
@@ -38,7 +38,7 @@ namespace Projeto.Lib.Repositorios
             ListaLojas.Add(loja2);
         }
 
-
+        /*
         public void Apagar(Loja obj)
         {
             ListaLojas.Remove(obj);
@@ -51,23 +51,31 @@ namespace Projeto.Lib.Repositorios
             return temp;
         }
 
+        public Loja Atualizar(Loja t, Loja novosDados)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Criar(Loja obj)
         {
             ListaLojas.Add(obj);
         }
-
-        public Loja ObterPorNome(string Nome)
+        */
+        #region Read
+        public Loja ObterPorIdentificador(Guid guid)
         {
-            var dadosLoja = ListaLojas
-                                .Where(x => x.Nome == Nome)
-                                .OrderByDescending(x => x.NIF)
-                                .FirstOrDefault();
-            return dadosLoja;
+            return ListaLojas.FirstOrDefault(x => x.Identificador == guid);
+        }
+
+        public Loja ObterPorNome(string nome)
+        {
+            return ListaLojas.FirstOrDefault(x => x.Nome == nome);
         }
 
         public List<Loja> ObterTodos()
         {
             return ListaLojas;
         }
+        #endregion
     }
 }

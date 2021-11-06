@@ -9,8 +9,7 @@ namespace Projeto.Lib.Entidades
 
         public Fornecedor()
         {
-            Ativo = true;
-            DataAlteracao = DateTime.Now;
+            
         }
 
         public static bool NIFValido()
@@ -29,6 +28,7 @@ namespace Projeto.Lib.Entidades
             //sb.AppendLine("|    Código Postal: " + Morada.CodigoPostal);
             //sb.AppendLine("|       Localidade: " + Morada.Localidade);
             //sb.AppendLine("|      Observações: " + Morada.Observacoes);
+            sb.AppendLine("|          Criação: " + DataCriacao);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();

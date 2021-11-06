@@ -1,10 +1,11 @@
 ﻿using Projeto.Lib.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Projeto.Lib.Repositorios
 {
-    public class RepositorioUtilizador : IRepositorio<Utilizador>
+    public class RepositorioUtilizador
     {
         private List<Utilizador> ListaUtilizadores;
         public RepositorioUtilizador()
@@ -35,7 +36,7 @@ namespace Projeto.Lib.Repositorios
             ListaUtilizadores.Add(utilizador2);
         }
 
-        
+        /*
         public void Apagar(Utilizador obj)
         {
             ListaUtilizadores.Remove(obj);
@@ -48,23 +49,31 @@ namespace Projeto.Lib.Repositorios
             return temp;
         }
 
+        public Utilizador Atualizar(Utilizador t, Utilizador novosDados)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Criar(Utilizador obj)
         {
             ListaUtilizadores.Add(obj);
         }
-
-        public Utilizador ObterPorNome(string Nome)
+        */
+        #region Read
+        public Utilizador ObterPorIdentificador(Guid guid)
         {
-            var dadosUtilizador = ListaUtilizadores
-                                .Where(x => x.Nome == Nome)
-                                .OrderByDescending(x => x.Nome)
-                                .FirstOrDefault();
-            return dadosUtilizador;
+            return ListaUtilizadores.FirstOrDefault(x => x.Identificador == guid);
+        }
+
+        public Utilizador ObterPorNome(string nome)
+        {
+            return ListaUtilizadores.FirstOrDefault(x => x.Nome == nome);
         }
 
         public List<Utilizador> ObterTodos()
         {
             return ListaUtilizadores;
         }
+        #endregion
     }
 }

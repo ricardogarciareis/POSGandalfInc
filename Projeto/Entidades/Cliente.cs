@@ -7,11 +7,9 @@ namespace Projeto.Lib.Entidades
     {
         public DateTime DataNascimento { get; set; }
 
-
         public Cliente()
         {
-            Ativo = true;
-            DataAlteracao = DateTime.Now;
+
         }
 
         public static bool NIFValido()
@@ -27,10 +25,13 @@ namespace Projeto.Lib.Entidades
             sb.AppendLine("|       Designação: " + Nome);
             sb.AppendLine("|              NIF: " + NIF);
             sb.AppendLine("|  Data Nascimento: " + DataNascimento.ToString("dd/MM/yyyy"));
-            //sb.AppendLine("|         Endereço: " + Morada.Endereco);
+            sb.AppendLine("|         Endereço: " + MoradaPessoa.Endereco);
             //sb.AppendLine("|    Código Postal: " + Morada.CodigoPostal);
             //sb.AppendLine("|       Localidade: " + Morada.Localidade);
             //sb.AppendLine("|      Observações: " + Morada.Observacoes);
+            sb.AppendLine("|         Telefone: " + Telefone);
+            sb.AppendLine("|            Email: " + Email);
+            sb.AppendLine("|          Criação: " + DataCriacao);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();

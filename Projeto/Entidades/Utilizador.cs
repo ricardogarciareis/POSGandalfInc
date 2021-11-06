@@ -20,6 +20,7 @@ namespace Projeto.Lib.Entidades
             sb.AppendLine("|             Nome: " + Nome);
             sb.AppendLine("|         UserName: " + Email);
             sb.AppendLine("|         Password: " + Password);
+            sb.AppendLine("|          Criação: " + DataCriacao);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();

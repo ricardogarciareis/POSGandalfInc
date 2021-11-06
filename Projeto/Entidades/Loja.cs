@@ -12,8 +12,7 @@ namespace Projeto.Lib.Entidades
 
         public Loja()
         {
-            Ativo = true;
-            DataAlteracao = DateTime.Now;
+            
         }
 
         public override string ToString()
@@ -28,6 +27,7 @@ namespace Projeto.Lib.Entidades
             //sb.AppendLine("|    Código Postal: " + Morada.CodigoPostal);
             //sb.AppendLine("|       Localidade: " + Morada.Localidade);
             //sb.AppendLine("|      Observações: " + Morada.Observacoes);
+            sb.AppendLine("|          Criação: " + DataCriacao);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();

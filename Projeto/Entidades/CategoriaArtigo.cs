@@ -10,8 +10,7 @@ namespace Projeto.Lib.Entidades
     {
         public CategoriaArtigo()
         {
-            Ativo = true;
-            DataAlteracao = DateTime.Now;
+            
         }
 
         public override string ToString()
@@ -20,6 +19,7 @@ namespace Projeto.Lib.Entidades
             sb.AppendLine("|               ID: " + Identificador);
             sb.AppendLine("|            Ativo: " + Ativo);
             sb.AppendLine("|             Nome: " + Nome);
+            sb.AppendLine("|          Criação: " + DataCriacao);
             sb.AppendLine("| Última Alteração: " + DataAlteracao);
             sb.Append("+-----------------------------------------------------------------+");
             return sb.ToString();

@@ -13,28 +13,23 @@ namespace Projeto.Lib.Entidades
 
         public bool Ativo { get; set; }
 
-        private DateTime dataAlteracao;
-        public DateTime DataAlteracao
-        {
-            get { return dataAlteracao; }
-            set { 
-                if(dataAlteracao == new DateTime())
-                {
-                    dataAlteracao = DateTime.Now;
-                }
-                dataAlteracao = value;
-            }
-        }
+        public DateTime DataCriacao { get; set; }
+        public DateTime DataAlteracao { get; set; }
+
 
         public Entidade()
         {
             Identificador = Guid.NewGuid();
+            Ativo = true;
+            DataCriacao = DateTime.Now;
         }
 
         public Entidade(string nome)
         {
             Nome = nome;
             Identificador = Guid.NewGuid();
+            Ativo = true;
+            DataCriacao = DateTime.Now;
         }
 
     }

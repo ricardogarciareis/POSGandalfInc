@@ -5,7 +5,7 @@ using System;
 
 namespace Projeto.Lib.Repositorios
 {
-    public class RepositorioFornecedor : IRepositorio<Fornecedor>
+    public class RepositorioFornecedor
     {
         private List<Fornecedor> ListaFornecedores;
         public RepositorioFornecedor()
@@ -33,7 +33,7 @@ namespace Projeto.Lib.Repositorios
             ListaFornecedores.Add(fornecedor2);
         }
 
-        
+        /*
         public void Apagar(Fornecedor obj)
         {
             ListaFornecedores.Remove(obj);
@@ -46,23 +46,31 @@ namespace Projeto.Lib.Repositorios
             return temp;
         }
 
+        public Fornecedor Atualizar(Fornecedor t, Fornecedor novosDados)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Criar(Fornecedor obj)
         {
             ListaFornecedores.Add(obj);
         }
-
-        public Fornecedor ObterPorNome(string Nome)
+        */
+        #region Read
+        public Fornecedor ObterPorIdentificador(Guid guid)
         {
-            var dadosFornecedor = ListaFornecedores
-                                .Where(x => x.Nome == Nome)
-                                .OrderByDescending(x => x.Nome)
-                                .FirstOrDefault();
-            return dadosFornecedor;
+            return ListaFornecedores.FirstOrDefault(x => x.Identificador == guid);
+        }
+
+        public Fornecedor ObterPorNome(string nome)
+        {
+            return ListaFornecedores.FirstOrDefault(x => x.Nome == nome);
         }
 
         public List<Fornecedor> ObterTodos()
         {
             return ListaFornecedores;
         }
+        #endregion
     }
 }
