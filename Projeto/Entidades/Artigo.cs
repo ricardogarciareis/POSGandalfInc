@@ -22,14 +22,15 @@ namespace Projeto.Lib.Entidades
         public override string ToString()
         {
             var sb = new StringBuilder();
-            //sb.AppendLine("|               ID: " + Identificador);
+            sb.AppendLine("|               ID: " + Identificador);
             sb.AppendLine("|            Ativo: " + Ativo);
             sb.AppendLine("|             Nome: " + Nome);
-            sb.AppendLine("|        Categoria: " + CategoriaArtigo.Nome);
-            sb.AppendLine("|       Referência: " + ReferenciaEAN);
+            //sb.AppendLine("|        Categoria: " + CategoriaArtigo.Nome);
+            //sb.AppendLine("|       Referência: " + ReferenciaEAN);
             sb.AppendLine("|       Fabricante: " + Fabricante);
             sb.AppendLine("|  Número de Série: " + NumeroSerie);
             //sb.AppendLine("|       Fornecedor: " + Fornecedor.Nome);
+            //Console.OutputEncoding = Encoding.UTF8;  //Utilizado para reconhecer o símbolo €
             //sb.AppendLine("|   Preço Unitário: € " + PrecoUnitario);
             //sb.AppendLine("|          Criação: " + DataCriacao);
             //sb.AppendLine("| Última Alteração: " + DataAlteracao);

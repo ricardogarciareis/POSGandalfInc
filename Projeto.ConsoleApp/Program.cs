@@ -6,7 +6,7 @@ namespace Projeto.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var ecra = new Saidas();
+            var ecra = new MenuGeral();
             ecra.ApresentarMenu();
 
 
