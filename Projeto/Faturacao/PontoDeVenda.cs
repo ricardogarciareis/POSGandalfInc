@@ -1,5 +1,4 @@
 ﻿using Projeto.Lib.Entidades;
-using System;
 using System.Text;
 
 namespace Projeto.Lib.Faturacao

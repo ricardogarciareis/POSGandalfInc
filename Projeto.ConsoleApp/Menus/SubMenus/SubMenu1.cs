@@ -1,9 +1,5 @@
 ﻿using Projeto.Lib.Repositorios;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto.ConsoleApp
 {
@@ -62,12 +58,12 @@ namespace Projeto.ConsoleApp
             Console.WriteLine("+-----------------------------------------------------------------+");
             Console.WriteLine("|                  CONSULTA DE TODAS AS VENDAS                    |");
             Console.WriteLine("+-----------------------------------------------------------------+");
-            //var repo = new RepositorioVenda();
-            //var listaVendass = repo.ObterTodos();
-            //foreach (var item in listaVendas)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            var repo = new RepositorioVenda();
+            var listaVendas = repo.ObterTodos();
+            foreach (var item in listaVendas)
+            {
+                Console.WriteLine(item);
+            }
             Console.Write("| R - RETORNAR: ");
             string escolhaSair = Console.ReadLine().ToUpper();
             if (escolhaSair == "R") { ApresentarSubMenu(); }

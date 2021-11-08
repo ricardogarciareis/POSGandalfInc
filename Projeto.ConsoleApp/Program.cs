@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Projeto.ConsoleApp
+﻿namespace Projeto.ConsoleApp
 {
     class Program
     {
@@ -9,7 +7,9 @@ namespace Projeto.ConsoleApp
             var ecra = new MenuGeral();
             ecra.ApresentarMenu();
 
-
+            //var teste = new teste();
+            //teste.Testar();
         }
+       
     }
 }

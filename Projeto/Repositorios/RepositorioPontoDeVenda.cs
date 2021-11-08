@@ -1,12 +1,4 @@
-﻿using Projeto.Lib.Entidades;
-using Projeto.Lib.Faturacao;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projeto.Lib.Repositorios 
+﻿namespace Projeto.Lib.Repositorios
 {
     //public class RepositorioPontoDeVenda : IRepositorio<PontoDeVenda>
     //{
@@ -16,19 +8,19 @@ namespace Projeto.Lib.Repositorios
     //        ListaPontosDeVenda = new List<PontoDeVenda>();
     //        var pontoDeVenda0 = new PontoDeVenda
     //        {
-                
+
     //        };
     //        ListaPontosDeVenda.Add(pontoDeVenda0);
 
     //        var pontoDeVenda1 = new PontoDeVenda
     //        {
-                
+
     //        };
     //        ListaPontosDeVenda.Add(pontoDeVenda1);
 
     //        var pontoDeVenda2 = new PontoDeVenda
     //        {
-                
+
     //        };
     //        ListaPontosDeVenda.Add(pontoDeVenda2);
     //    }
