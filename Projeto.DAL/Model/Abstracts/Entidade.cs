@@ -7,7 +7,7 @@ namespace Projeto.DAL.Model
     public abstract class Entidade
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Identificador { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         [MaxLength(255)]
