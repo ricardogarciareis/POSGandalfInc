@@ -15,8 +15,8 @@ namespace Projeto.DAL.Model
 
         public bool Ativo { get; set; }
 
-        public DateTime DataCriacao { get; set; }
-        public DateTime DataAlteracao { get; set; }
+        public DateTime? DataCriacao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
 
         
         //O que fazer?

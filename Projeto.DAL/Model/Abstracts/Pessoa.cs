@@ -14,6 +14,7 @@ namespace Projeto.DAL.Model
         public string Telefone { get; set; }
 
         [EmailAddress]
+        [MaxLength(255)]
         public string Email { get; set; }
 
         //O que fazer?

@@ -1,17 +1,15 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Projeto.DAL.Model
 {
-    public class Cliente : Pessoa
+    public class Fornecedor : Pessoa
     {
-        public DateTime? DataNascimento { get; set; }
+        [Range(0,5)]
+        public int Pontuacao { get; set; }  //Classificação do Fornecedor
 
-
-        //O que fazer?
-
-        //public Cliente()
+        //public Fornecedor()
         //{
-
+            
         //}
 
         //public static bool NIFValido()
@@ -26,18 +24,16 @@ namespace Projeto.DAL.Model
         //    sb.AppendLine("|            Ativo: " + Ativo);
         //    sb.AppendLine("|       Designação: " + Nome);
         //    sb.AppendLine("|              NIF: " + NIF);
-        //    sb.AppendLine("|  Data Nascimento: " + DataNascimento.ToString("dd/MM/yyyy"));
-        //    sb.AppendLine("|         Endereço: " + MoradaPessoa.Endereco);
+        //    //sb.AppendLine("|         Endereço: " + Morada.Endereco);
         //    //sb.AppendLine("|    Código Postal: " + Morada.CodigoPostal);
         //    //sb.AppendLine("|       Localidade: " + Morada.Localidade);
         //    //sb.AppendLine("|      Observações: " + Morada.Observacoes);
-        //    sb.AppendLine("|         Telefone: " + Telefone);
-        //    sb.AppendLine("|            Email: " + Email);
         //    sb.AppendLine("|          Criação: " + DataCriacao);
         //    sb.AppendLine("| Última Alteração: " + DataAlteracao);
         //    sb.Append("+-----------------------------------------------------------------+");
         //    return sb.ToString();
         //}
+
 
 
     }

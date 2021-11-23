@@ -28,17 +28,18 @@ namespace Projeto.DAL.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("DataAlteracao")
+                    b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataCriacao")
+                    b.Property<DateTime?>("DataCriacao")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataNascimento")
+                    b.Property<DateTime?>("DataNascimento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<Guid?>("MoradaPessoaId")
                         .HasColumnType("uniqueidentifier");
@@ -63,6 +64,51 @@ namespace Projeto.DAL.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("Projeto.DAL.Model.Fornecedor", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<Guid?>("MoradaPessoaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("NIF")
+                        .IsRequired()
+                        .HasMaxLength(9)
+                        .HasColumnType("nvarchar(9)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int>("Pontuacao")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Telefone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MoradaPessoaId");
+
+                    b.ToTable("Fornecedores");
+                });
+
             modelBuilder.Entity("Projeto.DAL.Model.Morada", b =>
                 {
                     b.Property<Guid>("Id")
@@ -77,10 +123,10 @@ namespace Projeto.DAL.Migrations
                         .HasMaxLength(7)
                         .HasColumnType("nvarchar(7)");
 
-                    b.Property<DateTime>("DataAlteracao")
+                    b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataCriacao")
+                    b.Property<DateTime?>("DataCriacao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Distrito")
@@ -112,7 +158,51 @@ namespace Projeto.DAL.Migrations
                     b.ToTable("Moradas");
                 });
 
+            modelBuilder.Entity("Projeto.DAL.Model.Utilizador", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Utilizadores");
+                });
+
             modelBuilder.Entity("Projeto.DAL.Model.Cliente", b =>
+                {
+                    b.HasOne("Projeto.DAL.Model.Morada", "MoradaPessoa")
+                        .WithMany()
+                        .HasForeignKey("MoradaPessoaId");
+
+                    b.Navigation("MoradaPessoa");
+                });
+
+            modelBuilder.Entity("Projeto.DAL.Model.Fornecedor", b =>
                 {
                     b.HasOne("Projeto.DAL.Model.Morada", "MoradaPessoa")
                         .WithMany()
