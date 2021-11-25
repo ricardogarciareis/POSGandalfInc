@@ -4,4 +4,17 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Entidades\**" />
+    <Compile Remove="Repositorios\**" />
+    <EmbeddedResource Remove="Entidades\**" />
+    <EmbeddedResource Remove="Repositorios\**" />
+    <None Remove="Entidades\**" />
+    <None Remove="Repositorios\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.DAL\Projeto.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

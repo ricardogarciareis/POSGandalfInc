@@ -1,4 +1,4 @@
-﻿using Projeto.Lib.Repositorios;
+﻿using Projeto.DAL.Model;
 using System;
 
 namespace Projeto.ConsoleApp
@@ -88,7 +88,7 @@ namespace Projeto.ConsoleApp
             if(obtido == null) { testado = true; }
             else
             {
-                Console.WriteLine("|               ID: " + obtido.Identificador);
+                Console.WriteLine("|               ID: " + obtido.Id);
                 Console.WriteLine("|            Ativo: " + obtido.Ativo);
                 Console.WriteLine("|             Nome: " + obtido.Nome);
                 Console.WriteLine("|            Local: " + obtido.Local);

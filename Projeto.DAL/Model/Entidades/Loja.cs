@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace Projeto.DAL.Model
 {
     public class Loja : Pessoa
     {
+        [Required]
         [MaxLength(255)]
         public string Local { get; set; }
 

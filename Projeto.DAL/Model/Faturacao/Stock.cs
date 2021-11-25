@@ -1,9 +1,8 @@
-﻿using Projeto.DAL.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Projeto.Lib.Faturacao
+namespace Projeto.DAL.Model
 {
     public class Stock
     {

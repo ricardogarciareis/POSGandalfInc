@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Projeto.DAL.Model;
 using Projeto.Lib.Entidades;
 using System.Collections.Generic;
 

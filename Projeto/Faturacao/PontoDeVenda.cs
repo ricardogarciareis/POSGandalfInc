@@ -1,4 +1,4 @@
-﻿using Projeto.Lib.Entidades;
+﻿using Projeto.DAL.Model;
 using System.Text;
 
 namespace Projeto.Lib.Faturacao
@@ -17,7 +17,7 @@ namespace Projeto.Lib.Faturacao
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine("|               ID: " + Identificador);
+            sb.AppendLine("|               ID: " + Id);
             sb.AppendLine("|            Ativo: " + Ativo);
             //sb.AppendLine("|       Designação: " + Loja.Nome);
             //sb.AppendLine("|            Local: " + Loja.Local);

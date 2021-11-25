@@ -1,4 +1,4 @@
-﻿using Projeto.Lib.Entidades;
+﻿using Projeto.DAL.Model;
 using System.Collections.Generic;
 using System.Text;
 

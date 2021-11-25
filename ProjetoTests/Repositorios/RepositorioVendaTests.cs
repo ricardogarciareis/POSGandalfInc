@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Projeto.DAL.Model;
 using Projeto.Lib.Entidades;
 using Projeto.Lib.Faturacao;
 using System;
@@ -14,9 +15,9 @@ namespace Projeto.Lib.Repositorios.Tests
         {
             //Arrange
             var repo = new RepositorioVenda();
-            var venda = new Venda
+            var venda = new DAL.Model.Venda
             {
-                DetalheVenda = new DetalheDeVenda()
+                DetalheVenda = new DAL.Model.DetalheDeVenda()
                 {
                     ListaDeArtigos = new List<Artigo>()
                     {

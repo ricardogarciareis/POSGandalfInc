@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Projeto.DAL.Model;
 using System;
 
 namespace Projeto.Lib.Entidades.Tests
@@ -21,7 +22,7 @@ namespace Projeto.Lib.Entidades.Tests
             pessoa.Telefone = "999888777";
 
             //Act
-            var possuiIdentificadorAtribuido = pessoa.Identificador != new Guid();
+            var possuiIdentificadorAtribuido = pessoa.Id != new Guid();
             var possuiDataCriacaoAtribuida = pessoa.DataCriacao != new DateTime();
 
             //Assert
