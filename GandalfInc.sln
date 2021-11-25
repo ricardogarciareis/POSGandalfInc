@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacao", "Documentaca
 		Documentation\PROJETO I.pdf = Documentation\PROJETO I.pdf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.DAL", "Projeto.DAL\Projeto.DAL.csproj", "{55B54B15-BBE7-4D90-8447-D88BF62F92BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.DAL", "Projeto.DAL\Projeto.DAL.csproj", "{55B54B15-BBE7-4D90-8447-D88BF62F92BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.BLL", "Projeto.BLL\Projeto.BLL.csproj", "{C2446FCD-177F-4A32-82E0-E9734A2E991B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,18 @@ Global
 		{55B54B15-BBE7-4D90-8447-D88BF62F92BB}.Release|x64.Build.0 = Release|Any CPU
 		{55B54B15-BBE7-4D90-8447-D88BF62F92BB}.Release|x86.ActiveCfg = Release|Any CPU
 		{55B54B15-BBE7-4D90-8447-D88BF62F92BB}.Release|x86.Build.0 = Release|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Debug|x64.Build.0 = Debug|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Debug|x86.Build.0 = Debug|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Release|x64.ActiveCfg = Release|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Release|x64.Build.0 = Release|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Release|x86.ActiveCfg = Release|Any CPU
+		{C2446FCD-177F-4A32-82E0-E9734A2E991B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

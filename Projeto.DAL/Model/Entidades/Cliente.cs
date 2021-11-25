@@ -1,10 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Projeto.DAL.Model
 {
     public class Cliente : Pessoa
     {
+        [Display(Name = "Nome do CLiente")]
+        public override string Nome { get => base.Nome; set => base.Nome = value.ToUpper(); }
+
+        [Range(typeof(DateTime), "1/1/1900", "1/1/2100",
+        ErrorMessage = "Data para {0} deve situar-se entre {1} e {2}")]
         public DateTime? DataNascimento { get; set; }
+
+        public virtual List<Venda> Compras { get; set; }
 
 
         //O que fazer?

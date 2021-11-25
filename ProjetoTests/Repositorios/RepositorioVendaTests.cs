@@ -26,7 +26,7 @@ namespace Projeto.Lib.Repositorios.Tests
                         new Artigo { Nome = "Artigo 1", NumeroSerie = "1000001.00", PrecoUnitario = 229.90M }
                     }
                 },
-                Identificador = new Guid("37364cda-ccca-4236-8d41-464ca8d84f04")
+                Id = new Guid("37364cda-ccca-4236-8d41-464ca8d84f04")
             };
             repo.Criar(venda);
             var totalEsperado = 199.90M + 199.90M + 229.90M;

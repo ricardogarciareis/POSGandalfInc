@@ -25,7 +25,7 @@ namespace Projeto.DAL.Model
                 }
             };
             ListaVendas.Add(venda0);
-            id = venda0.Identificador;
+            id = venda0.Id;
 
             var venda1 = new Venda
             {
@@ -71,7 +71,7 @@ namespace Projeto.DAL.Model
         #region Read
         public Venda ObterPorIdentificador(Guid guid)
         {
-            return ListaVendas.FirstOrDefault(x => x.Identificador == guid);
+            return ListaVendas.FirstOrDefault(x => x.Id == guid);
         }
 
         //public Venda ObterPorNome(string nome)
@@ -88,7 +88,7 @@ namespace Projeto.DAL.Model
         public decimal CalcularTotalPorIdentificador(Guid id)
         {
             decimal soma = 0;
-            var venda = ListaVendas.Where(x => x.Identificador == id).FirstOrDefault();
+            var venda = ListaVendas.Where(x => x.Id == id).FirstOrDefault();
             var lista = venda.DetalheVenda.ListaDeArtigos.ToList();
             foreach (var item in lista)
             {
@@ -100,7 +100,7 @@ namespace Projeto.DAL.Model
         public decimal CalcularTotalPorIdentificador()
         {
             decimal soma = 0;
-            var venda = ListaVendas.Where(x => x.Identificador == id).FirstOrDefault();
+            var venda = ListaVendas.Where(x => x.Id == id).FirstOrDefault();
             var lista = venda.DetalheVenda.ListaDeArtigos.ToList();
             foreach (var item in lista)
             {

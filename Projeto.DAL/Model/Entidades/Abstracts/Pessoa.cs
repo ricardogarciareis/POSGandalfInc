@@ -5,12 +5,11 @@ namespace Projeto.DAL.Model
     public abstract class Pessoa : Entidade
     {
         [Required]
-        [MinLength(9), MaxLength(9)]
+        [MinLength(9, ErrorMessage = "NIF com tamanho errado"), MaxLength(9, ErrorMessage = "NIF com tamanho errado")]
         public string NIF { get; set; }
 
         public virtual Morada MoradaPessoa { get; set; }
 
-        [Phone]
         public string Telefone { get; set; }
 
         [EmailAddress]

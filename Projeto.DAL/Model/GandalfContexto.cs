@@ -12,6 +12,18 @@ namespace Projeto.DAL.Model
         //public DbSet<CategoriaArtigo> CategoriasArtigos { get; set; }
         //public DbSet<Artigo> Artigos { get; set; }
 
+        //Faturacao
+        //public DbSet<Stock> Stocks { get; set; }
+        //public DbSet<PontoDeVenda> PontosDeVendas { get; set; }
+        //public DbSet<Venda> Vendas { get; set; }
+        //public DbSet<DetalheDeVenda> DetalhesDeVenda { get; set; }
+
+
+        //public GandalfContexto()
+        //{
+
+        //}
+
         //Configuração do Provider
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
