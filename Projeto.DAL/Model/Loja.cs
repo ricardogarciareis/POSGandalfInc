@@ -1,22 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace Projeto.DAL.Model
 {
-    public class Fornecedor : Pessoa
+    public class Loja : Pessoa
     {
-        [Range(0,5)]
-        public int Pontuacao { get; set; }  //Classificação do Fornecedor
+        [MaxLength(255)]
+        public string Local { get; set; }
 
         //O que fazer?
 
-        //public Fornecedor()
+        //public Loja()
         //{
 
-        //}
-
-        //public static bool NIFValido()
-        //{
-        //    return false;
         //}
 
         //public override string ToString()
@@ -26,6 +22,7 @@ namespace Projeto.DAL.Model
         //    sb.AppendLine("|            Ativo: " + Ativo);
         //    sb.AppendLine("|       Designação: " + Nome);
         //    sb.AppendLine("|              NIF: " + NIF);
+        //    sb.AppendLine("|      Localização: " + Local);
         //    //sb.AppendLine("|         Endereço: " + Morada.Endereco);
         //    //sb.AppendLine("|    Código Postal: " + Morada.CodigoPostal);
         //    //sb.AppendLine("|       Localidade: " + Morada.Localidade);
@@ -35,7 +32,6 @@ namespace Projeto.DAL.Model
         //    sb.Append("+-----------------------------------------------------------------+");
         //    return sb.ToString();
         //}
-
 
 
     }

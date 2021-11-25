@@ -8,6 +8,7 @@ namespace Projeto.DAL.Model
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Utilizador> Utilizadores { get; set; }
         public DbSet<Fornecedor> Fornecedores { get; set; }
+        public DbSet<Loja> Lojas { get; set; }
 
         //Configuração do Provider
         protected override void OnConfiguring(DbContextOptionsBuilder options)
