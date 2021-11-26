@@ -4,7 +4,6 @@ namespace Projeto.DAL.Entidades
 {
     public class Morada : Entidade
     {
-        [Required]
         [MaxLength(255)]
         public string Endereco { get; set; }
 
@@ -16,7 +15,6 @@ namespace Projeto.DAL.Entidades
         [MaxLength(255)]
         public string Localidade { get; set; }
 
-        [Required]
         [MaxLength(255)]
         public string Distrito { get; set; }
 

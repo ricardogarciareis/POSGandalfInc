@@ -29,7 +29,7 @@ namespace Projeto.DAL.Entidades
         public DateTime? DataAlteracao { get; set; }
 
 
-        //O que fazer?
+        //O que fazer? Se este construtor desaparecer teremos um erro no test
 
         public Entidade()
         {

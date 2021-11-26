@@ -21,12 +21,5 @@ namespace Projeto.DAL.Entidades
             Morada = new Morada();
         }
 
-        //O que fazer?
-
-        //public Pessoa()
-        //{
-        //    MoradaPessoa = new Morada();
-
-        //}
     }
 }

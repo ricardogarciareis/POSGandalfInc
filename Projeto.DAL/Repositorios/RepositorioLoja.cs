@@ -15,7 +15,7 @@ namespace Projeto.DAL.Repositorios
             {
                 Nome = "Nome do Loja 0",
                 NIF = "500456780",
-                Local = "Local 0"
+                NomeDoGerente = "Gerente 0"
             };
             ListaLojas.Add(loja0);
 
@@ -23,7 +23,7 @@ namespace Projeto.DAL.Repositorios
             {
                 Nome = "Nome do Loja 1",
                 NIF = "500456781",
-                Local = "Local 1"
+                NomeDoGerente = "Gerente 1"
             };
             ListaLojas.Add(loja1);
 
@@ -31,7 +31,7 @@ namespace Projeto.DAL.Repositorios
             {
                 Nome = "Nome do Loja 2",
                 NIF = "500456782",
-                Local = "Local 2"
+                NomeDoGerente = "Gerente 2"
             };
             ListaLojas.Add(loja2);
         }

@@ -6,7 +6,7 @@ namespace Projeto.DAL.Entidades
     {
         [Required]
         [MaxLength(255)]
-        public string Local { get; set; }
+        public string NomeDoGerente { get; set; }
 
         //O que fazer?
 

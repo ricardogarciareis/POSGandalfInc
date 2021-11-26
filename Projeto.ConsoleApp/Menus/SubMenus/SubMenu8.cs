@@ -91,7 +91,7 @@ namespace Projeto.ConsoleApp
                 Console.WriteLine("|               ID: " + obtido.Id);
                 Console.WriteLine("|            Ativo: " + obtido.Ativo);
                 Console.WriteLine("|             Nome: " + obtido.Nome);
-                Console.WriteLine("|            Local: " + obtido.Local);
+                Console.WriteLine("|  Nome do Gerente: " + obtido.NomeDoGerente);
                 Console.WriteLine("|              NIF: " + obtido.NIF);
                 Console.WriteLine("|         Telefone: " + obtido.Telefone);
                 Console.WriteLine("|            Email: " + obtido.Email);

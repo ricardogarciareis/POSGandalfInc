@@ -15,7 +15,7 @@ namespace Projeto.DAL.Entidades
         public string Fabricante { get; set; }
 
         [MaxLength(255)]
-        public string? NumeroSerie { get; set; }
+        public string NumeroSerie { get; set; }
 
         public virtual Fornecedor Fornecedor { get; set; }
 

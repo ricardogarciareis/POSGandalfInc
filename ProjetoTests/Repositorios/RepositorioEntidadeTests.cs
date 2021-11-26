@@ -68,8 +68,8 @@ namespace Projeto.Tests.Repositorios
             var cliente1 = new Cliente { Nome = "Cliente Procurado", Telefone = "911222333", Id = new Guid("37364cda-ccca-4236-8d41-464ca8d84f04") };
             var cliente2 = new Cliente { Nome = "Cliente Teste", Telefone = "900111222", Id = new Guid("31f2f22e-0926-403d-8137-11034931d083") };
 
-            var loja1 = new Loja { Nome = "Loja Teste", Local = "Alfragide", Id = new Guid("bdea63d8-01da-47ae-97f9-481acc0109cf") };
-            var loja2 = new Loja { Nome = "Loja Procurada", Local = "Almada", Id = new Guid("8fb6e66c-f5d6-4aa3-9dc8-eb4544569965") };
+            var loja1 = new Loja { Nome = "Loja Teste", NomeDoGerente = "Alfredo", Id = new Guid("bdea63d8-01da-47ae-97f9-481acc0109cf") };
+            var loja2 = new Loja { Nome = "Loja Procurada", NomeDoGerente = "Amadeu", Id = new Guid("8fb6e66c-f5d6-4aa3-9dc8-eb4544569965") };
 
             //Act
             repo.Criar(cliente1);
