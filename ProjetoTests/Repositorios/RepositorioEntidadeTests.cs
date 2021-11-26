@@ -1,8 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Projeto.DAL.Model;
+using Projeto.DAL.Entidades;
+using Projeto.DAL.Repositorios;
 using System;
 
-namespace Projeto.Lib.Repositorios.Tests
+namespace Projeto.Tests.Repositorios
 {
     [TestClass()]
     public class RepositorioEntidadeTests

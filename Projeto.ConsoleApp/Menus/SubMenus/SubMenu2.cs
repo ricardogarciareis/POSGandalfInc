@@ -1,5 +1,4 @@
-﻿using Projeto.DAL.Model;
-using Projeto.Lib.Repositorios;
+﻿using Projeto.DAL.Repositorios;
 using System;
 using System.Text;
 

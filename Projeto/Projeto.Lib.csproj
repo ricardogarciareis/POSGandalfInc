@@ -6,10 +6,16 @@
 
   <ItemGroup>
     <Compile Remove="Entidades\**" />
+    <Compile Remove="Faturacao\**" />
+    <Compile Remove="Infraestrutura\**" />
     <Compile Remove="Repositorios\**" />
     <EmbeddedResource Remove="Entidades\**" />
+    <EmbeddedResource Remove="Faturacao\**" />
+    <EmbeddedResource Remove="Infraestrutura\**" />
     <EmbeddedResource Remove="Repositorios\**" />
     <None Remove="Entidades\**" />
+    <None Remove="Faturacao\**" />
+    <None Remove="Infraestrutura\**" />
     <None Remove="Repositorios\**" />
   </ItemGroup>
 

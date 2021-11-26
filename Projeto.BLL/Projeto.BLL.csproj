@@ -4,4 +4,25 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Infraestrutura\**" />
+    <EmbeddedResource Remove="Infraestrutura\**" />
+    <None Remove="Infraestrutura\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Faturacao\DetalheDeVenda.cs" />
+    <Compile Remove="Faturacao\PontoDeVenda.cs" />
+    <Compile Remove="Faturacao\TipoPagamento.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Infraestrutura\ImpressoraRecibo.cs" />
+    <Compile Include="Infraestrutura\Interfaces\IImpressora.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.DAL\Projeto.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

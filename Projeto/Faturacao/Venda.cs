@@ -1,4 +1,4 @@
-﻿using Projeto.DAL.Model;
+﻿using Projeto.DAL.Entidades;
 using Projeto.Lib.Infraestrutura;
 using System;
 using System.Text;
@@ -7,7 +7,7 @@ namespace Projeto.Lib.Faturacao
 {
     public class Venda : IImpressora
     {
-        public Guid Identificador { get; set; }
+        public Guid Id { get; set; }
         public bool Fechada { get; set; }
         public Utilizador Vendedor { get; set; }
         public Cliente Cliente { get; set; }
@@ -20,7 +20,7 @@ namespace Projeto.Lib.Faturacao
 
         public Venda()
         {
-            Identificador = Guid.NewGuid();
+            Id = Guid.NewGuid();
             Fechada = false;
             DetalheVenda = new DetalheDeVenda();
             DataHoraVenda = DateTime.Now;
@@ -41,7 +41,7 @@ namespace Projeto.Lib.Faturacao
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine("|               ID: " + Identificador);
+            sb.AppendLine("|               ID: " + Id);
             sb.AppendLine("|          Fechada: " + Fechada);
             //sb.AppendLine("|         Vendedor: " + Vendedor.Nome);
             //sb.AppendLine("|  Nome do Cliente: " + Cliente.Nome);
@@ -69,7 +69,7 @@ namespace Projeto.Lib.Faturacao
             var sb = new StringBuilder();
             sb.AppendLine($"Fatura Recibo FRD {DataHoraVenda.Year}/{NumeroSerie}");
             sb.AppendLine($"Loja: {PontoDeVenda.Loja.NIF} - Ponto de Venda: {PontoDeVenda.Id} ");
-            sb.AppendLine($"Loja: {PontoDeVenda.Loja.MoradaPessoa}");
+            sb.AppendLine($"Loja: {PontoDeVenda.Loja.Morada}");
             sb.AppendLine($"Vendedor: {Vendedor.Nome} Identificador: {Vendedor.Id} ");
             sb.AppendLine($"Data da Fatura/Recibo: {DataHoraVenda} ");
             sb.AppendLine($"Tipo Pagamento: {TipoPagamento} "); //TODO: Trocar enumerador por string

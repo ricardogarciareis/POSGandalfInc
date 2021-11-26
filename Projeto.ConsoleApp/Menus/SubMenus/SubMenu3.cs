@@ -1,4 +1,4 @@
-﻿using Projeto.DAL.Model;
+﻿using Projeto.DAL.Repositorios;
 using System;
 
 namespace Projeto.ConsoleApp

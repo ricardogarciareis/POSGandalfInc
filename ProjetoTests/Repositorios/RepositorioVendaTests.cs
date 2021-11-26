@@ -1,11 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Projeto.DAL.Model;
-using Projeto.Lib.Entidades;
-using Projeto.Lib.Faturacao;
+using Projeto.DAL.Entidades;
+using Projeto.DAL.Repositorios;
 using System;
 using System.Collections.Generic;
 
-namespace Projeto.Lib.Repositorios.Tests
+namespace Projeto.Tests.Repositorios
 {
     [TestClass()]
     public class RepositorioVendaTests
@@ -15,9 +14,9 @@ namespace Projeto.Lib.Repositorios.Tests
         {
             //Arrange
             var repo = new RepositorioVenda();
-            var venda = new DAL.Model.Venda
+            var venda = new DAL.Faturacao.Venda
             {
-                DetalheVenda = new DAL.Model.DetalheDeVenda()
+                DetalheVenda = new DAL.Faturacao.DetalheDeVenda()
                 {
                     ListaDeArtigos = new List<Artigo>()
                     {

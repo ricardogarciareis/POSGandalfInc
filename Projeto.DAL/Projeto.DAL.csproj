@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Model\Infraestrutura\**" />
-    <EmbeddedResource Remove="Model\Infraestrutura\**" />
-    <None Remove="Model\Infraestrutura\**" />
+    <Compile Remove="Infraestrutura\**" />
+    <EmbeddedResource Remove="Infraestrutura\**" />
+    <None Remove="Infraestrutura\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,10 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Projeto.BLL\Projeto.BLL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
-﻿using Projeto.DAL.Model;
-using Projeto.Lib.Repositorios;
+﻿using Projeto.DAL.Repositorios;
 using System;
 
 namespace Projeto.ConsoleApp
@@ -96,10 +95,10 @@ namespace Projeto.ConsoleApp
                 Console.WriteLine("|              NIF: " + obtido.NIF);
                 Console.WriteLine("|         Telefone: " + obtido.Telefone);
                 Console.WriteLine("|            Email: " + obtido.Email);
-                Console.WriteLine("|         Endereço: " + obtido.MoradaPessoa.Endereco);
-                Console.WriteLine("|    Código Postal: " + obtido.MoradaPessoa.CodigoPostal);
-                Console.WriteLine("|       Localidade: " + obtido.MoradaPessoa.Localidade);
-                Console.WriteLine("|      Observações: " + obtido.MoradaPessoa.Observacoes);
+                Console.WriteLine("|         Endereço: " + obtido.Morada.Endereco);
+                Console.WriteLine("|    Código Postal: " + obtido.Morada.CodigoPostal);
+                Console.WriteLine("|       Localidade: " + obtido.Morada.Localidade);
+                Console.WriteLine("|      Observações: " + obtido.Morada.Observacoes);
                 Console.WriteLine("|          Criação: " + obtido.DataCriacao);
                 Console.WriteLine("| Última Alteração: " + obtido.DataAlteracao);
                 Console.WriteLine("+-----------------------------------------------------------------+");

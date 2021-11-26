@@ -1,9 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Projeto.DAL.Model;
-using Projeto.Lib.Entidades;
+using Projeto.DAL.Entidades;
+using Projeto.DAL.Faturacao;
+using Projeto.Lib.Faturacao;
 using System.Collections.Generic;
 
-namespace Projeto.Lib.Faturacao.Tests
+namespace Projeto.Tests.Faturacao
 {
     [TestClass()]
     public class VendaTests
@@ -38,7 +39,8 @@ namespace Projeto.Lib.Faturacao.Tests
             };
 
             //Act
-            var vendaPossivel = stock.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
+            var logicaDeStock = new LogicaDeStock(stock);
+            var vendaPossivel = logicaDeStock.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
 
             //Assert
             Assert.IsFalse(vendaPossivel);
@@ -80,7 +82,8 @@ namespace Projeto.Lib.Faturacao.Tests
             }
 
             //Act
-            var vendaPossivel = stock.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
+            var logicaDeStock = new LogicaDeStock(stock);
+            var vendaPossivel = logicaDeStock.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
 
             //Assert
             Assert.IsTrue(vendaPossivel);
@@ -128,7 +131,8 @@ namespace Projeto.Lib.Faturacao.Tests
             };
 
             //Act
-            var vendaPossivel = stockCentralDeTestes.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
+            var logicaDeStock = new LogicaDeStock(stockCentralDeTestes);
+            var vendaPossivel = logicaDeStock.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
 
             //Assert
             Assert.IsFalse(vendaPossivel);
@@ -157,7 +161,8 @@ namespace Projeto.Lib.Faturacao.Tests
             }
 
             //Act
-            var vendaPossivel = stockCentralDeTestes.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
+            var logicaDeStock = new LogicaDeStock(stockCentralDeTestes);
+            var vendaPossivel = logicaDeStock.ValidarDisponibilidade(venda.DetalheVenda.ListaDeArtigos);
 
             //Assert
             Assert.AreEqual(resultadoEsperado, vendaPossivel);

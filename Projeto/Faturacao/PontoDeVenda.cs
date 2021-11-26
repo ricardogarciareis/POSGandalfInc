@@ -1,4 +1,4 @@
-﻿using Projeto.DAL.Model;
+﻿using Projeto.DAL.Entidades;
 using System.Text;
 
 namespace Projeto.Lib.Faturacao
